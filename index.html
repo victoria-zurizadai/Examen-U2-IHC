@@ -38,12 +38,12 @@
     <!-- Navbar -->
     <nav class="navbar navbar-light">
     <div class="container-fluid">
-        <a class="navbar-brand"  style="color: rgb(255, 176, 235)" href="index.html" > <b> ✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦</b>
-        </div>
-        
-        <img src="https://www.gifsanimados.org/data/media/707/bienvenida-imagen-animada-0088.gif" class="img-fluid" alt="..." />
-    
+        <a class="navbar-brand"  style="color: rgb(255, 176, 235)" > <b> ✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦</b></a> 
+    </div>     
+        <img src="https://www.gifsanimados.org/data/media/707/bienvenida-imagen-animada-0088.gif" alt="..." />
+   
     </nav>
+
     <main class="container-fluid mt-3" >
         <section class="row">
             <div class="row container-fluid" >
@@ -51,11 +51,13 @@
                 <div class="jumbotron col-md-12">                            
                 <div class="row">
                             <h4 class="titulo text-center" style="color: rgb(12, 0, 20);"><b>CARGA UNA IMAGEN ✔</b> </h4>
-                            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                           
                             <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="file" aria-describedby="inputGroupFileAddon01" onchange="mostrar()" >
-                                <label class="custom-file-label" style="background-color: rgb(255, 202, 255);" style="width:100%; height:100%;" for ="inputGroupFile01">Buscar imagen local</label></div>
+                              
+<input type="file" class="custom-file-input" id="file" aria-describedby="inputGroupFileAddon01" onchange="mostrar()" >
+<label class="custom-file-label" style="background-color: rgb(255, 202, 255);" style="width:100%; height:100%;" for ="inputGroupFile01">Buscar imagen local</label></div>
                             </div>
+                            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
                             <input type="url" placeholder="Buscar imagen por URL" style="background-color: rgb(255, 202, 255);" id="url" style="width:81%; height:100%;">
                             <button  style="background-color: rgb(180, 178, 180);" type="button" class="btn btn-primary" id="bcarga"  onchange="mostrar2()" style=" top: 1px; left:90px;">
                             Buscar</button>
@@ -64,8 +66,6 @@
                            <h5 class="titulo text-center" style="background-color: rgb(65, 5, 65);" ><b>Explora esta variedad de animaciones</b> 
                             <img src="https://4.bp.blogspot.com/-rmqtd_MtF4o/Wfo2G640pyI/AAAAAAAAMqw/57SjCXG8r4cMOABaPxAC0IdSLBC7jE3hwCLcBGAs/s1600/giphy.gif" 
                             class="img-fluid" width="20" height="20" /></h5>
-                        
-                           
 
                            <div class="jumbotron col-md-12 ">
                             <form action="https://www.google.com/search" method="GET" id="search-form" target="_blank"></form>
@@ -94,7 +94,6 @@
                     <div class="jumbotron col-md-5 offset-md-0">
                         <div><h4 class="titulo text-center" style="color: rgb(12, 0, 20);"><b>ZONA DE ANIMACIÓN ✔</b></h4></div>
                         
-                        <div class="ball"></div>
                         <img class="rounded mx-auto d-block img-thumbnail ball" style="max-height:50%" id="img">
                             
                     </div>
@@ -137,5 +136,4 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.0/js/mdb.min.js"></
 <script src='https://cdnjs.cloudflare.com/ajax/libs/just-animate/2.6.2/just-animate-tools.min.js'></script><script  src="./script.js"></script>
 
 </body>
-
 </html>
