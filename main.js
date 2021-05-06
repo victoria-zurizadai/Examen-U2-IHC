@@ -5,16 +5,12 @@ function mostrar(){
   if (file) {
     reader.readAsDataURL(archivo);
     reader.onloadend = function () {
-        document.getElementById("img").src = reader.result;
-        const imagen=document.getElementById("img"); }}}
-        
-       
-        $("#url").change(function(){
-          var url = $(this).val();    
-          document.getElementById("img").src = url;
-          $("#img").html('<img src="'+ url +'" alt="imagen">')
-
-       })
+    document.getElementById("img").src = reader.result;
+    const imagen=document.getElementById("img"); }}}
+    $("#url").change(function(){
+    var url = $(this).val();    
+    document.getElementById("img").src = url;
+    $("#img").html('<img src="'+ url +'" alt="imagen">')    })
 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 if(SpeechRecognition){
@@ -38,24 +34,25 @@ if(SpeechRecognition){
     }
     recognition.addEventListener("start", startSpeechRecognition); 
     function startSpeechRecognition() {
-        micIcon.classList.remove("fa-microphone");
-        micIcon.classList.add("fa-microphone-slash");
-        console.log("Speech Recognition Active");
-    }
+    micIcon.classList.remove("fa-microphone");
+    micIcon.classList.add("fa-microphone-slash");
+    console.log("Speech Recognition Active");   }
 
     recognition.addEventListener("end", endSpeechRecognition);
     function endSpeechRecognition() {
-        micIcon.classList.remove("fa-microphone-slash");
-        micIcon.classList.add("fa-microphone");
-        
-        console.log("Speech Recognition Disconnected");
-    }
+    micIcon.classList.remove("fa-microphone-slash");
+    micIcon.classList.add("fa-microphone");
+    console.log("Speech Recognition Disconnected");   }
 
     recognition.addEventListener("result", resultOfSpeechRecognition);
     function resultOfSpeechRecognition() {
-        const currentResultIndex = event.resultIndex;
-        const transcript = event.results[currentResultIndex][0].transcript;
+    const currentResultIndex = event.resultIndex;
+    const transcript = event.results[currentResultIndex][0].transcript;
 
+
+/*----Comienzo de comandos----- */
+
+/*COMANDO CONTRAER IMAGEN */
         if (transcript.toLowerCase().trim() === "contraer imagen") {
             var t1 = just.animate({
                 targets: "#img",
@@ -73,6 +70,8 @@ if(SpeechRecognition){
             });
             t1.play();
         }
+
+/*COMANDO AMPLIAR IMAGEN */
         else if (transcript.toLowerCase().trim() === "ampliar imagen") {
           var t1 = just.animate({
             targets: "#img",
@@ -91,6 +90,9 @@ if(SpeechRecognition){
             });
             t1.play();
         }
+
+
+ /*COMANDO REVENTAR IMAGEN */       
         else if (transcript.toLowerCase().trim() === "reventar imagen") {
           var t1 = just.animate({
             targets: "#img",
@@ -137,6 +139,8 @@ if(SpeechRecognition){
             });
             t1.play();
         }
+
+/*COMANDO ROTAR IMAGEN */
         else if (transcript.toLowerCase().trim() === "rotar imagen") {
             const v = document.querySelector("#img").animate(
                 [
@@ -182,6 +186,8 @@ if(SpeechRecognition){
             });
             t1.play();
         }
+   
+ /*COMANDO PARPADEO DE IMAGEN */       
         
         else if (transcript.toLowerCase().trim() === "parpadeo de imagen") {
           var t1 = just.animate({
@@ -209,17 +215,18 @@ if(SpeechRecognition){
           });
             t1.play();
         }
+
+ /*COMANDO ESFUMAR IMAGEN */   
+
         else if (transcript.toLowerCase().trim() === "esfumar imagen") {
           var t1 = just.animate({
               targets: "#img",
               duration: 4500,
               web: {
-                  opacity: [.25, .75]
-                  
+                  opacity: [.25, .75]                  
               }
           });
-          t1.play();
-      }
+          t1.play(); }
         else if(transcript.toLowerCase().trim()==="rebote de imagen"){
             var t1 = just.animate({
               targets: "#img",
@@ -239,6 +246,8 @@ if(SpeechRecognition){
             });
             t1.play();
         }
+
+ /*COMANDO IMAGEN EN FORMA DE CRUZ*/     
         else if(transcript.toLowerCase().trim()==="imagen en forma de cruz"){
           var t1 = just.animate({
             targets: "#img",
